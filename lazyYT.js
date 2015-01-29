@@ -94,7 +94,7 @@
             'background-image': ['url(https://img.youtube.com/vi/', id, '/', thumb_img, ')'].join('')
         })
           .addClass('lazyYT-image-loaded')
-          .on('click', function (e) {
+          .on('click touchstart', function (e) {
             e.preventDefault();
             if (!$el.hasClass('lazyYT-video-loaded') && $thumb.hasClass('lazyYT-image-loaded')) {
               $el.html('<iframe src="//www.youtube.com/embed/' + id + '?autoplay=1&' + youtube_parameters + '" frameborder="0" allowfullscreen></iframe>')
